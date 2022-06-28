@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root{
+    --dark: #000000;
+    --light: #ffffff;
+    --border: #615e5e;
+    --border-btn: #edf2f4;
+}
+
+#alertaDestino{
+    color: #000000;
+    font-size: 0.7em;
+}
+
+.delete-compromisso:hover, .update-compromisso:hover, .irParaDestino:hover{
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.iconeHeader{
+    color: white;
+    margin-left: 10px;
+}
+
+a {
+    color: #000000 ;
+    text-decoration: none !important;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+    
+}
+
+.nav-brand{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    justify-content: space-around;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #2e2d2d;
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-cinza{
+    color: #5f6163;
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #000000, #2c2a30);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#header nav{
+    background-color: #000000;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main{
+    margin-top: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+#site-main .container .box-nav > a{
+    font-size: 1.0em;
+    padding: .5em 2em;
+}
+
+#site-main .container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: 0;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #32383e;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td{
+        border: none;
+        position: relative;
+    }
+
+}
+
+/*  add compromisso & update compromisso template */
+.form-title{
+    margin-top: 0.1em;
+}
+
+.form-title > h2{
+    padding: .5em 0;
+}
+
+.new_compromisso{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_compromisso .form-group,
+#form-mapa .form-group,
+#add_compromisso .form-group{
+    margin: .4em 0;
+}
+
+#update_compromisso .form-group input[type="text"], input[type="email"],
+#form-mapa .form-group input[type="text"],
+#add_compromisso .form-group input[type="text"], input[type="email"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_compromisso .form-group input[type="date"], input[type="time"],
+#add_compromisso .form-group input[type="date"], input[type="time"]{
+    display: inline-block;
+    width: 50%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_compromisso .form-group .btn,
+#form-mapa .form-group .btn,
+.form-group .btn,
+#add_compromisso .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color:#000000; 
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+    color: white;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: center !important;
+}
+
+/* Estilo data table */
+
+.table .thead-dark th{
+    background-color: black !important;
+}
+
+:after, :before {
+    box-sizing: border-box;
+}
+i{
+margin-bottom:4px;
+}
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-app {
+    color: white;
+    box-shadow: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 10px 15px;
+    margin: 0;
+    min-width: 60px;
+    max-width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 12px;
+    transition: all .2s;
+    background-color: steelblue !important;
+}
+.btn-app > .fa, .btn-app > .glyphicon, .btn-app > .ion {
+    font-size: 30px;
+    display: block;
+}
+.btn-app:hover {
+    border-color: #aaa;
+    transform: scale(1.1);
+}
+.pdf, .excel {
+background-color: #000000 !important;
+}
+
+
+/*Esto es opcional pero sirve para que todos los botones de exportacion se distribuyan de manera equitativa usando flexbox
+.flexcontent {
+    display: flex;
+    justify-content: space-around;
+}
+*/
+
+.selectTable{
+height:40px;
+float:right;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+    margin-top: 1em;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #000000 !important;
+    border-color: #000000;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #000000 !important;
+    border-color: #545b62;
+}
+.titulo-tabla{
+color:#606263;
+text-align:center;
+margin-top:15px;
+margin-bottom:15px;
+font-weight:bold;
+}
+.inline{
+display:inline-block;
+padding:0;
+}
+
+.page-item.active .page-link{
+    background-color: black !important;
+    border-color: #545b62 !important;
+}
+
+
+  
+
+

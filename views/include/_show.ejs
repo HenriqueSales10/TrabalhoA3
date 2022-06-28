@@ -1,0 +1,27 @@
+<%for(var i =0; i <compromissos.length; i++) {%>
+
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= compromissos[i].tipo %></td>
+    <td><%= compromissos[i].endereco %></td>
+    <td><%= compromissos[i].telefone %></td>
+    <td><%= compromissos[i].data_compromisso %></td>
+    <td><%= compromissos[i].hora_compromisso %></td>
+    <td>
+
+        <a href="/ir-compromisso?id=<%= compromissos[i]._id %>" class="btn irParaDestino">
+            <span class="text-gradient"><i class="fa-solid fa-car"></i></span>
+        </a>
+        
+        <a href="/update-compromisso?id=<%= compromissos[i]._id %>" class="btn update-compromisso">
+            <span class="text-gradient"><i class="fa-solid fa-pencil"></i></i></span>
+        </a>
+
+        <a href="#" class="btn delete-compromisso" data-id="<%= compromissos[i]._id %>">
+            <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+        </a>
+        
+
+    </td>
+</tr>
+<%}%>

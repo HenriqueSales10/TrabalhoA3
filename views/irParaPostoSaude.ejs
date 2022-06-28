@@ -1,0 +1,66 @@
+<!--Include header-->
+<%- include('include/_headerMapa')%>
+    <!--Include header-->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+
+        <div class="jumbotron">
+            <div class="container-fluid">
+
+                <div class="form-title text-center">
+                    <h2 class="text-dark">Ir para o posto de saúde mais próximo</h2>
+                    <span class="text-cinza">Aqui você pode verificar o melhor caminho para ir até o posto de saúde.</span>
+                </div>
+
+                <!-- Form handling -->
+                <form id="form-mapa">
+                    <div class="mapa">
+
+                        <div class="form-group">
+                            <label for="EnderecoOrigem" class="text-cinza">De:</label>
+                            <input type="text" name="EnderecoOrigem" id="EnderecoOrigem" required>
+                        </div>
+
+                        <label for="TipoPosto" class="text-cinza">Tipo do posto de saúde:</label>
+                        <select id="TipoPosto" name="TipoPosto" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                            <option value="UBS" selected>UBS (Unidade Básica de Saúde)</option>
+                            <option value="ESF">ESF (Estratégia Saúde da Família)</option>
+                          </select>
+                          
+                       
+                    </div>
+
+                </form>
+
+                <div class="form-group">
+                    <button class="btn text-light irDestino" onclick="calcularRotaPostoSaude();">Ir para o destino</button>
+                </div>
+
+                
+       
+
+            </div>
+
+            <div class="container-fluid">
+                <div id="googleMap">
+    
+                </div>
+                
+                <div id="output">
+    
+                </div>
+            </div>
+    
+        </div>
+
+        </div>
+    </main>
+    <!-- Main Site -->
+
+    <!--Include footer-->
+    <%- include('include/_footer')%>
+        <!--Include footer-->
+
+        

@@ -1,0 +1,47 @@
+<!--Include header-->
+<%- include('include/_header')%>
+    <!--Include header-->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <a href="/add-compromisso" class="border-shadow">
+                    <span class="text-gradient">Novo compromisso <i class="fa-solid fa-add"></i></span>
+                </a>
+            </div>
+
+            <!-- Form handling -->
+            <form action="/" method="POST">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" id="table_compromissos">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Descrição</th>
+                                <th>Endereço</th>
+                                <th>Telefone</th>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <%- include('include/_show')%>
+                        </tbody>
+
+                    </table>
+                    
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+    <!-- Main Site -->
+
+    <!--Include footer-->
+    <%- include('include/_footer')%>
+        <!--Include footer-->

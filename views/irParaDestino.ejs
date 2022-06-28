@@ -1,0 +1,69 @@
+<!--Include header-->
+<%- include('include/_headerMapa')%>
+    <!--Include header-->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+
+        <div class="jumbotron">
+            <div class="container-fluid">
+
+                <div class="box-nav d-flex-justify-between">
+                    <div class="filter">
+                        <a href="/"><i class="fas fa-angle-double-left"></i> Todos os compromissos</a>
+                    </div>
+                </div>
+
+                <div class="form-title text-center">
+                    <h2 class="text-dark">Ir até o endereço do compromisso</h2>
+                    <span class="text-cinza">Aqui você pode verificar o melhor caminho para ir até o compromisso</span>
+                </div>
+
+                <!-- Form handling -->
+                <form id="form-mapa">
+                    <div class="mapa">
+
+                        <div class="form-group">
+                            <label for="EnderecoOrigem" class="text-cinza">De:</label>
+                            <input type="text" name="EnderecoOrigem" id="EnderecoOrigem" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="EnderecoDestino" class="text-cinza">Para:</label>
+                            <input type="text" name="EnderecoDestino" value="<%= compromisso.endereco %>"
+                                id="EnderecoDestino" required>
+                        </div>
+
+                       
+                    </div>
+
+                </form>
+
+                <div class="form-group">
+                    <button class="btn text-light irDestino" onclick="calcRoute();">Ir para o destino</button>
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+                <div id="googleMap">
+    
+                </div>
+                
+                <div id="output">
+    
+                </div>
+            </div>
+    
+        </div>
+
+        </div>
+    </main>
+    <!-- Main Site -->
+
+    <!--Include footer-->
+    <%- include('include/_footer')%>
+        <!--Include footer-->
+
+        
